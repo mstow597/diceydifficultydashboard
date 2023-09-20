@@ -21,6 +21,10 @@ class AbilityScore extends Component {
   };
 
   calculateModifier = (abilityScore) => {
+    if (abilityScore < 1 || abilityScore > 30) {
+      return "Error";
+    }
+
     return Math.floor((abilityScore - 10) / 2);
   };
 }
