@@ -1,0 +1,13 @@
+.main-nav {
+  color: white;
+  list-style: none;
+  position: absolute;
+  display: flex;
+  gap: 2rem;
+  top: 0;
+  padding: 2rem;
+}
+
+.main-nav-item {
+  cursor: pointer;
+}

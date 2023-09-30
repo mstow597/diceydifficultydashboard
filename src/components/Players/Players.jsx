@@ -1,9 +1,3 @@
-
-
 export default () => {
-    return <div>
-            <ul>
-        {players.map(player => <Player />>)}
-        </ul>
-        </div>
-}
+  return <div>Hello</div>;
+};

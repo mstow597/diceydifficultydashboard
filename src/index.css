@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 body {
@@ -17,4 +18,5 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
