@@ -1,0 +1,21 @@
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+
+.circle {
+  border: 2px solid;
+  position: absolute;
+  top: 75%;
+  width: 125px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  bottom: 0;
+  z-index: 1; /* Ensure the circle is on top of the box */
+}
