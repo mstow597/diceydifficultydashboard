@@ -5,17 +5,34 @@
   border: 2px solid;
   width: 200px;
   height: 200px;
-  position: absolute;
+  background-color: white;
+  position: relative; /* Changed to relative */
+  z-index: 1;
 }
 
 .circle {
   border: 2px solid;
   position: absolute;
   top: 75%;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
   width: 125px;
   height: 100px;
   background-color: white;
   border-radius: 50%;
-  bottom: 0;
-  z-index: 1; /* Ensure the circle is on top of the box */
+  text-align: center;
+  z-index: 2;
+}
+
+.modifier {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  position: absolute; /* Position it absolutely within .circle */
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Center both horizontally and vertically */
 }

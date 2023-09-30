@@ -1,17 +1,20 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./AbilityScore.css";
 //Ability Score containers (Strength, Dex, etc), will calculate the modifier
 //needs a method on click to roll
 //needs a method for on hover to show a little pencil icon that you can then use to edit the number
 
-function AbilityScore() {
-  const [abilityScore, setAbilityScore] = useState(0);
+function AbilityScore(props) {
+  const [abilityScore, setAbilityScore] = useState(props.abilityscore);
   const [modifier, setModifier] = useState(0);
+  const [editable, setEditable] = useState(false);
+  const abilityString = props.name;
 
   const handleClick = () => {
     const randomNumber = Math.floor(Math.random() * 20) + 1;
     const result = randomNumber + calculateModifier(abilityScore);
-    // You can do something with the 'result' here if needed.
+    console.log(result);
+    return result;
   };
 
   const calculateModifier = (abilityScore) => {
@@ -22,8 +25,11 @@ function AbilityScore() {
   };
 
   return (
-    <div className="box">
-      <div className="circle"></div>
+    <div onClick={handleClick} className="box">
+      <h2 contentEditable={editable}>{abilityScore}</h2>
+      <div className="circle">
+        <h3 className="modifier">{modifier}</h3>
+      </div>
     </div>
   );
 }
