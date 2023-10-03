@@ -3,7 +3,7 @@ import "./AbilityScore.css";
 //Ability Score containers (Strength, Dex, etc), will calculate the modifier
 //needs a method on click to roll
 //needs a method for on hover to show a little pencil icon that you can then use to edit the number
-
+// testing git config email
 function AbilityScore(props) {
   const [abilityScore, setAbilityScore] = useState(props.abilityscore);
   const [modifier, setModifier] = useState(0);
